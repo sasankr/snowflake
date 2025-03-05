@@ -1,0 +1,11 @@
+
+version: 2
+
+sources:
+  - name: sai
+    database: sasank
+    schema: sai
+    tables:
+      - name: INBOUND_TABLE
+        description: "Table containing order data for transformation."
+
