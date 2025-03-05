@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: sasank_sai
+    description: "Source tables from the Snowflake schema 'sasank.sai'"
+    database: sasank
+    schema: sai
+    tables:
+      - name: INBOUND_TABLE
+        description: "Raw inbound orders data"
+      - name: OUTBOUND_TABLE
+        description: "Transformed outbound orders data"

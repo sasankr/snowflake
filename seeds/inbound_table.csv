@@ -1,0 +1,12 @@
+FIRSTNAME,LASTNAME,ORDERID,ORDERNAME,ORDERQUANTITY,ORDERDATE,PAYMENTTYPE,PRICE_USD
+
+John,Doe,101,Laptop,1,02-15-2024,Credit Card,1000
+Jane,Smith,102,Smartphone,2,03-01-2024,Paypal,800
+Alice,Johnson,103,Tablet,1,04-10-2024,Debit Card,500
+Bob,Brown,104,Monitor,3,05-20-2024,Cash,300
+Charlie,Davis,105,Keyboard,4,06-05-2024,Credit Card,100
+David,Wilson,106,Mouse,5,07-12-2024,Paypal,50
+Emma,Moore,107,Printer,1,08-25-2024,Debit Card,200
+Frank,Clark,108,Camera,2,09-30-2024,Credit Card,900
+Grace,Evans,109,Headphones,3,10-15-2024,Cash,150
+Henry,Thomas,110,Speaker,2,11-22-2024,Paypal,250
