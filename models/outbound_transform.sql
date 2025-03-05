@@ -1,23 +1,30 @@
 {{ config(
-    materialized='table',
-    schema='sai'
+    materialized='table'
 ) }}
 
 WITH source_data AS (
     SELECT
         FIRSTNAME,
-        LASTNAME,
+        LASTNAME AS SURNAME, -- Transform LASTNAME to SURNAME
         ORDERID,
-        ORDERNAME,
+        ORDERNAME AS ORDERDESCRIPTION, -- Transform ORDERNAME to ORDERDESCRIPTION
         ORDERQUANTITY,
-        ORDERDATE,
+        TO_CHAR(TO_DATE(ORDERDATE, 'mm-dd-yyyy'), 'dd-mm-yyyy') AS ORDERDATE,
         PAYMENTTYPE,
-        PRICE_USD * 0.94 AS PRICE_EUROS
-    FROM {{ source('sasank_sai', 'INBOUND_TABLE') }}
+        PRICE_USD * 0.94 AS PRICE_EUROS -- Assuming you want to convert PRICE_USD to PRICE_EUROS
+    FROM {{ source('sai', 'INBOUND_TABLE') }}  -- Using the source defined in sources.yml
 )
 
 SELECT * 
-FROM source_data;
+FROM source_data
+
+
+
+
+
+
+
+
 
 
 
